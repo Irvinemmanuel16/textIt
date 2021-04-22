@@ -1,0 +1,113 @@
+$font-primary: 'Paytone One', sans-serif;
+$font-secondary: 'Source Sans Pro', sans-serif;
+$color-primary: #1053b3;
+$color-secondary: #f57c1b;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 22px;
+}
+
+.logo {
+  width: 1.6em;
+}
+
+.login {
+  font-family: $font-primary;
+  font-size: 12px;
+  color: $color-primary;
+  text-align: center;
+  // line-height: ;
+}
+
+.hero {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin: 0;
+    font-size: 40px;
+    font-family: $font-primary;
+    color: $color-primary;
+    span {
+      color: $color-secondary;
+    }
+  }
+  p {
+    font-family: $font-secondary;
+    font-size: 14px;
+    width: 235px;
+    text-align: center;
+    color: $color-primary;
+  }
+  button {
+    width: 165px;
+    background-color: white;
+    border: 3px solid $color-primary;
+    padding: 5px;
+    border-radius: 20px;
+    color: $color-secondary;
+    font-family: $font-primary;
+  }
+}
+
+.mockup {
+  z-index: 1;
+  margin-left: 30px;
+}
+
+.features-container {
+  display: flex;
+  background-color: white;
+  transform: translateY(-315px);
+  height: 500px;
+  flex-direction: column;
+  align-items: center;
+  border-top: 5px solid whitesmoke;
+}
+
+.features-title {
+  font-family: $font-primary;
+  font-size: 30px;
+  color: $color-primary;
+}
+
+.features {
+  width: 100%;
+  display: grid;
+  grid-gap: 6px 0;
+}
+
+.feature-card {
+  display: flex;
+  border-radius: 20px;
+  width: 90%;
+  padding: 15px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    font-family: $font-primary;
+    font-size: 20px;
+    margin: 0;
+  }
+  p {
+    font-family: $font-secondary;
+    font-size: 14px;
+    text-align: center;
+    width: 85%;
+  }
+}
+
+.orange {
+  border: 5px solid $color-secondary;
+  color: $color-secondary;
+}
+
+.blue {
+  border: 5px solid $color-primary;
+  color: $color-primary;
+}
