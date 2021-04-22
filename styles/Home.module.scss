@@ -2,6 +2,7 @@ $font-primary: 'Paytone One', sans-serif;
 $font-secondary: 'Source Sans Pro', sans-serif;
 $color-primary: #1053b3;
 $color-secondary: #f57c1b;
+$breakpoint-md: 700px;
 
 .header {
   display: flex;
@@ -11,7 +12,21 @@ $color-secondary: #f57c1b;
 }
 
 .logo {
-  width: 1.6em;
+  display: flex;
+  align-items: center;
+  div {
+    width: 25px;
+  }
+  h5 {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: $font-primary;
+    font-weight: 400;
+    color: $color-primary;
+    text-align: center;
+    visibility: hidden;
+  }
 }
 
 .login {
@@ -19,14 +34,28 @@ $color-secondary: #f57c1b;
   font-size: 12px;
   color: $color-primary;
   text-align: center;
-  // line-height: ;
 }
 
 .hero {
+  margin: 0 auto;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
+}
+
+.hero-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    font-size: 16px;
+    margin-top: 5px;
+    font-family: $font-primary;
+    color: $color-primary;
+    text-align: center;
+  }
   h1 {
     margin: 0;
     font-size: 40px;
@@ -34,6 +63,7 @@ $color-secondary: #f57c1b;
     color: $color-primary;
     span {
       color: $color-secondary;
+      padding-left: 5px;
     }
   }
   p {
@@ -55,15 +85,17 @@ $color-secondary: #f57c1b;
 }
 
 .mockup {
-  z-index: 1;
-  margin-left: 30px;
+  margin-top: 5px;
+  height: 285px;
+  margin-left: 10px;
 }
 
 .features-container {
+  position: relative;
+  z-index: 2;
   display: flex;
   background-color: white;
-  transform: translateY(-315px);
-  height: 500px;
+  height: min-content;
   flex-direction: column;
   align-items: center;
   border-top: 5px solid whitesmoke;
@@ -72,6 +104,8 @@ $color-secondary: #f57c1b;
 .features-title {
   font-family: $font-primary;
   font-size: 30px;
+  font-weight: 400;
+  margin: 15px 0;
   color: $color-primary;
 }
 
@@ -89,17 +123,23 @@ $color-secondary: #f57c1b;
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
-  h3 {
-    font-family: $font-primary;
-    font-size: 20px;
-    margin: 0;
-  }
   p {
     font-family: $font-secondary;
     font-size: 14px;
     text-align: center;
     width: 85%;
   }
+  h3 {
+    font-family: $font-primary;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.feature-content {
+  display: flex;
+  align-items: center;
 }
 
 .orange {
@@ -110,4 +150,172 @@ $color-secondary: #f57c1b;
 .blue {
   border: 5px solid $color-primary;
   color: $color-primary;
+}
+
+.special {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  padding: 15px;
+  padding-bottom: 25px;
+  background-color: $color-primary;
+  color: white;
+  div {
+    width: 333px;
+  }
+  h3 {
+    font-family: $font-primary;
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+    margin: 25px 0;
+  }
+  p {
+    font-family: $font-secondary;
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+    width: 85%;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  hr {
+    width: 300px;
+    margin: 25px 0;
+    height: 5px;
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    border-radius: 10px;
+  }
+  h2 {
+    width: 80%;
+    text-align: center;
+    font-size: 40px;
+    font-family: $font-primary;
+    color: $color-secondary;
+    line-height: 56px;
+  }
+}
+
+.footer-links {
+  width: 80%;
+  display: flex;
+  padding: 10px 0 35px 0;
+  justify-content: space-between;
+  align-items: center;
+  color: $color-primary;
+  font-size: 12px;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .header {
+    padding: 25px 35px;
+  }
+  .login {
+    font-size: 16px;
+  }
+  .logo {
+    div {
+      width: 36px;
+    }
+    h5 {
+      visibility: visible;
+    }
+  }
+  .hero {
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    h1 {
+      font-size: 62px;
+    }
+  }
+  .hero-intro {
+    align-items: flex-start;
+    p {
+      font-size: 16px;
+      width: 235px;
+      text-align: left;
+      margin-left: 10px;
+    }
+    a {
+      margin-top: 15px;
+      margin-left: 10px;
+      font-size: 18px;
+    }
+    button {
+      font-size: 18px;
+      width: 185px;
+    }
+  }
+  .mockup {
+    height: 350px;
+    div {
+      width: 320px;
+    }
+  }
+  .features-container {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .features-title {
+    font-size: 40px;
+  }
+  .feature-card {
+    padding: 30px;
+    h3 {
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 17px;
+      width: 80%;
+    }
+  }
+  .feature-content {
+    flex-direction: row-reverse;
+    margin-top: 10px;
+    p {
+      margin: 0 auto;
+      width: 50%;
+    }
+  }
+  .special {
+    margin-top: 25px;
+    padding: 30px;
+    div {
+      width: 489px;
+    }
+    h3 {
+      width: 50%;
+      margin: 20px 0;
+    }
+    p {
+      font-size: 20px;
+      line-height: 26px;
+      width: 75%;
+    }
+  }
+  .footer {
+    h2 {
+      width: 40%;
+    }
+    hr {
+      width: 100%;
+    }
+  }
+  .footer-links {
+    font-size: 20px;
+  }
 }

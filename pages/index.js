@@ -8,57 +8,61 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div>
+    <main>
       <header className={styles.header}>
         <div className={styles.logo} onClick={() => router.push('/')}>
-          <Image
-            src='https://ik.imagekit.io/yw2w0b4ajqv/text-it/logos/logo_G6W7KZC74.svg'
-            layout='responsive'
-            width={25}
-            height={27}
-          />
+          <div>
+            <Image
+              src='https://ik.imagekit.io/yw2w0b4ajqv/text-it/logos/logo_G6W7KZC74.svg'
+              layout='responsive'
+              width={25}
+              height={27}
+            />
+          </div>
+          <h5>TextIt</h5>
         </div>
         <Link href='/login'>
           <a className={styles.login}>Login</a>
         </Link>
       </header>
       <section className={styles.hero}>
-        <h1>
-          Text<span className={styles.hero.h1?.span}>It</span>
-        </h1>
-        <p>
-          Meet people, contact your friends or do business, in an easy and
-          simple way.
-        </p>
-        <button>Create an account</button>
-        <Link href='/login'>
-          <a
-            className={styles.login}
-            style={{ fontSize: '16px', marginTop: '5px' }}
-          >
-            Login
-          </a>
-        </Link>
+        <div className={styles['hero-intro']}>
+          <h1>
+            Text<span>It</span>
+          </h1>
+          <p>
+            Meet people, contact your friends or do business, in an easy and
+            simple way.
+          </p>
+          <button>Create an account</button>
+          <Link href='/login'>
+            <a>Login</a>
+          </Link>
+        </div>
+        <div className={styles.mockup}>
+          <div>
+            <Image
+              src='https://ik.imagekit.io/yw2w0b4ajqv/text-it/general/mobile-mockup_4ty75VcL0.svg'
+              width={355}
+              height={637}
+            />
+          </div>
+        </div>
       </section>
-      <div className={styles.mockup}>
-        <Image
-          src='https://ik.imagekit.io/yw2w0b4ajqv/text-it/general/mobile-mockup_zo4s5Wtey.svg'
-          width={461}
-          height={827}
-        />
-      </div>
       <section className={styles['features-container']}>
         <h1 className={styles['features-title']}>Express yourself!</h1>
         <div className={styles.features}>
           <div className={`${styles['feature-card']} ${styles.orange}`}>
             <h3>Show your emotions</h3>
-            <p>Use our emojis or send images</p>
-            <div>
-              <Image
-                src='https://ik.imagekit.io/yw2w0b4ajqv/text-it/general/card-emojis_bHXf-IPHV.svg'
-                width={140}
-                height={123}
-              />
+            <div className={styles['feature-content']}>
+              <p>Use our emojis or send images</p>
+              <div>
+                <Image
+                  src='https://ik.imagekit.io/yw2w0b4ajqv/text-it/general/card-emojis_bHXf-IPHV.svg'
+                  width={140}
+                  height={123}
+                />
+              </div>
             </div>
           </div>
           <div className={`${styles['feature-card']} ${styles.blue}`}>
@@ -77,13 +81,15 @@ export default function Home() {
           </div>
           <div className={`${styles['feature-card']} ${styles.orange}`}>
             <h3>Personalize your profile</h3>
-            <p>Introduce yourself as you want</p>
-            <div>
-              <Image
-                src='https://ik.imagekit.io/yw2w0b4ajqv/text-it/general/features-images-3_bO4xniDaEt.svg'
-                width={156}
-                height={156}
-              />
+            <div className={styles['feature-content']}>
+              <p>Introduce yourself as you want</p>
+              <div>
+                <Image
+                  src='https://ik.imagekit.io/yw2w0b4ajqv/text-it/general/features-images-3_bO4xniDaEt.svg'
+                  width={156}
+                  height={156}
+                />
+              </div>
             </div>
           </div>
           <div className={`${styles['feature-card']} ${styles.blue}`}>
@@ -102,6 +108,37 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+      <section className={styles.special}>
+        <div>
+          <Image
+            src='https://ik.imagekit.io/yw2w0b4ajqv/text-it/general/connect-image_oHZTIXtSfE.svg'
+            width={489}
+            height={489}
+          />
+        </div>
+        <h3>Conect with the people you love</h3>
+        <p>
+          Have the ones you care about in one place. Text It allows you to add
+          and organize your contact list according to your needs.
+        </p>
+      </section>
+      <footer className={styles.footer}>
+        <h2>Call It, Say It Text It</h2>
+        <div>
+          <Image
+            src='https://ik.imagekit.io/yw2w0b4ajqv/text-it/logos/logo-personal_vCgW_y5to.svg'
+            width={288}
+            height={69}
+          />
+        </div>
+        <hr />
+        <div className={styles['footer-links']}>
+          <span>©2021</span>
+          <a href='' target='blank' rel='no-referer'>
+            Source code
+          </a>
+        </div>
+      </footer>
+    </main>
   );
 }
