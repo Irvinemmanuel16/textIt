@@ -34,15 +34,18 @@ export default function Home() {
             Meet people, contact your friends or do business, in an easy and
             simple way.
           </p>
-          <button>Create an account</button>
-          <Link href='/login'>
-            <a>Login</a>
-          </Link>
+          <div className={styles['hero-cta']}>
+            <button>Create an account</button>
+            <Link href='/login'>
+              <a>Login</a>
+            </Link>
+          </div>
         </div>
         <div className={styles.mockup}>
           <div>
             <Image
               src='https://ik.imagekit.io/yw2w0b4ajqv/text-it/general/mobile-mockup_4ty75VcL0.svg'
+              priority
               width={355}
               height={637}
             />
@@ -68,8 +71,8 @@ export default function Home() {
           <div className={`${styles['feature-card']} ${styles.blue}`}>
             <h3>Your privacy is primordial</h3>
             <p>
-              Your messages are encryptedend to end, in addition, TextIt is open
-              source, everyone can know how TextIt works!
+              Your messages are encrypted end to end, in addition, TextIt is
+              open source, everyone can know how TextIt works!
             </p>
             <div>
               <Image
