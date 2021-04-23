@@ -98,7 +98,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={`${styles['feature-card']} ${styles.blue}`}>
+          <div className={styles['feature-card']}>
             <h3>From your browser!</h3>
             <p>
               Text it works on any browser. You don't need to donwload an

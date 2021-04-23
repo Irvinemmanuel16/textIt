@@ -154,9 +154,12 @@ $breakpoint-lg: 830px;
   &:nth-child(even) {
     border: 5px solid $color-primary;
     color: $color-primary;
-    p {
-      word-break: break-all;
-    }
+  }
+  p {
+    margin: 16px 0;
+    font-size: 14px;
+    width: 80%;
+    overflow-wrap: break-word;
   }
 }
 
@@ -164,6 +167,9 @@ $breakpoint-lg: 830px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  p {
+    width: 100%;
+  }
 }
 
 .special {
@@ -211,6 +217,7 @@ $breakpoint-lg: 830px;
     width: 80%;
     text-align: center;
     font-size: 40px;
+    font-weight: 400;
     font-family: $font-primary;
     color: $color-secondary;
     line-height: 56px;
@@ -296,8 +303,8 @@ $breakpoint-lg: 830px;
       margin-bottom: 15px;
     }
     p {
+      width: 50%;
       font-size: 17px;
-      width: 80%;
     }
   }
   .feature-content {
@@ -305,7 +312,8 @@ $breakpoint-lg: 830px;
     margin-top: 10px;
     p {
       margin: 0 auto;
-      width: 50%;
+      width: 80%;
+      font-size: 17px;
     }
   }
   .special {
@@ -386,7 +394,7 @@ $breakpoint-lg: 830px;
         width: 60%;
       }
       p {
-        word-break: break-all;
+        width: 80%;
       }
       div {
         margin: auto 0;
@@ -402,6 +410,9 @@ $breakpoint-lg: 830px;
     }
     &:last-child {
       grid-row: 2 / 4;
+      p {
+        width: 80%;
+      }
     }
   }
   .special {
