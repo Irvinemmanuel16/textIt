@@ -24,7 +24,7 @@ export default function Home() {
           </div>
           <h5>TextIt</h5>
         </div>
-        <Link href='/login'>
+        <Link href='/'>
           <a className={styles.login}>Login</a>
         </Link>
       </header>
