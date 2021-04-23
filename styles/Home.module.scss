@@ -55,6 +55,7 @@ $breakpoint-lg: 830px;
   h1 {
     margin: 0;
     font-size: 40px;
+    font-weight: 400;
     font-family: $font-primary;
     color: $color-primary;
     span {
@@ -97,7 +98,7 @@ $breakpoint-lg: 830px;
 
 .mockup {
   margin-top: 5px;
-  height: 275px;
+  height: 280px;
   margin-left: 10px;
 }
 
