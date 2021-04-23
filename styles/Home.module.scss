@@ -16,7 +16,7 @@ $breakpoint-lg: 830px;
   display: flex;
   align-items: center;
   div {
-    width: 25px;
+    width: 30px;
   }
   h5 {
     margin: 0;
@@ -32,7 +32,7 @@ $breakpoint-lg: 830px;
 
 .login {
   font-family: $font-primary;
-  font-size: 12px;
+  font-size: 14px;
   color: $color-primary;
   text-align: center;
   outline: none;
@@ -97,7 +97,7 @@ $breakpoint-lg: 830px;
 
 .mockup {
   margin-top: 5px;
-  height: 285px;
+  height: 275px;
   margin-left: 10px;
 }
 
@@ -146,21 +146,23 @@ $breakpoint-lg: 830px;
     font-weight: 400;
     margin: 0;
   }
+  &:nth-child(odd) {
+    border: 5px solid $color-secondary;
+    color: $color-secondary;
+  }
+  &:nth-child(even) {
+    border: 5px solid $color-primary;
+    color: $color-primary;
+    p {
+      word-break: break-all;
+    }
+  }
 }
 
 .feature-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-}
-
-.orange {
-  border: 5px solid $color-secondary;
-  color: $color-secondary;
-}
-
-.blue {
-  border: 5px solid $color-primary;
-  color: $color-primary;
 }
 
 .special {

@@ -9,6 +9,9 @@ export default function Home() {
 
   return (
     <main>
+      <Head>
+        <title>TextIt | Home</title>
+      </Head>
       <header className={styles.header}>
         <div className={styles.logo} onClick={() => router.push('/')}>
           <div>
@@ -36,7 +39,7 @@ export default function Home() {
           </p>
           <div className={styles['hero-cta']}>
             <button>Create an account</button>
-            <Link href='/login'>
+            <Link href='/'>
               <a>Login</a>
             </Link>
           </div>
@@ -68,7 +71,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={`${styles['feature-card']} ${styles.blue}`}>
+          <div className={styles['feature-card']}>
             <h3>Your privacy is primordial</h3>
             <p>
               Your messages are encrypted end to end, in addition, TextIt is
@@ -82,7 +85,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className={`${styles['feature-card']} ${styles.orange}`}>
+          <div className={styles['feature-card']}>
             <h3>Personalize your profile</h3>
             <div className={styles['feature-content']}>
               <p>Introduce yourself as you want</p>
@@ -137,7 +140,11 @@ export default function Home() {
         <hr />
         <div className={styles['footer-links']}>
           <span>©2021</span>
-          <a href='' target='blank' rel='no-referer'>
+          <a
+            href='https://github.com/Irvinemmanuel16/textIt'
+            target='blank'
+            rel='no-referer'
+          >
             Source code
           </a>
         </div>
