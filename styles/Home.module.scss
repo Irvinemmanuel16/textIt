@@ -4,6 +4,8 @@ $color-primary: #1053b3;
 $color-secondary: #f57c1b;
 $breakpoint-md: 700px;
 $breakpoint-lg: 830px;
+$breakpoint-xl: 1045px;
+$breakpoint-xxl: 1366px;
 
 .header {
   display: flex;
@@ -23,7 +25,6 @@ $breakpoint-lg: 830px;
     padding-left: 10px;
     font-size: 16px;
     font-family: $font-primary;
-    font-weight: 400;
     color: $color-primary;
     text-align: center;
     visibility: hidden;
@@ -55,7 +56,6 @@ $breakpoint-lg: 830px;
   h1 {
     margin: 0;
     font-size: 40px;
-    font-weight: 400;
     font-family: $font-primary;
     color: $color-primary;
     span {
@@ -116,7 +116,6 @@ $breakpoint-lg: 830px;
 .features-title {
   font-family: $font-primary;
   font-size: 30px;
-  font-weight: 400;
   margin: 15px 0;
   color: $color-primary;
 }
@@ -144,7 +143,6 @@ $breakpoint-lg: 830px;
   h3 {
     font-family: $font-primary;
     font-size: 20px;
-    font-weight: 400;
     margin: 0;
   }
   &:nth-child(odd) {
@@ -184,20 +182,23 @@ $breakpoint-lg: 830px;
   div {
     width: 333px;
   }
-  h3 {
-    font-family: $font-primary;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 42px;
-    text-align: center;
-    margin: 25px 0;
-  }
-  p {
-    font-family: $font-secondary;
-    font-size: 14px;
-    text-align: center;
-    line-height: 18px;
-    width: 85%;
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      font-family: $font-primary;
+      font-size: 30px;
+      line-height: 42px;
+      text-align: center;
+    }
+    p {
+      font-family: $font-secondary;
+      font-size: 14px;
+      text-align: center;
+      line-height: 18px;
+      width: 50%;
+    }
   }
 }
 
@@ -217,7 +218,6 @@ $breakpoint-lg: 830px;
     width: 80%;
     text-align: center;
     font-size: 40px;
-    font-weight: 400;
     font-family: $font-primary;
     color: $color-secondary;
     line-height: 56px;
@@ -322,14 +322,16 @@ $breakpoint-lg: 830px;
     div {
       width: 489px;
     }
-    h3 {
-      width: 50%;
-      margin: 20px 0;
-    }
-    p {
-      font-size: 20px;
-      line-height: 26px;
-      width: 75%;
+    section {
+      h3 {
+        width: 50%;
+        margin: 20px 0;
+      }
+      p {
+        font-size: 20px;
+        line-height: 26px;
+        width: 75%;
+      }
     }
   }
   .footer {
@@ -341,7 +343,7 @@ $breakpoint-lg: 830px;
     }
   }
   .footer-links {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -428,5 +430,99 @@ $breakpoint-lg: 830px;
     hr {
       width: 90%;
     }
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .header {
+    padding: 28px 54px;
+    h5 {
+      font-size: 18px;
+    }
+  }
+  .login {
+    font-size: 18px;
+  }
+  .hero {
+    width: 70%;
+  }
+  .hero-intro {
+    padding-left: 56px;
+    p {
+      font-size: 18px;
+    }
+  }
+  .hero-cta {
+    button {
+      width: max-content;
+      padding: 5px 10px;
+      font-size: 20px;
+    }
+    a {
+      font-size: 20px;
+    }
+  }
+  .mockup {
+    div {
+      width: 340px;
+    }
+  }
+  .special {
+    padding: 0 50px;
+    height: 440px;
+    flex-direction: row;
+    section {
+      h3 {
+        width: 75%;
+        font-size: 38px;
+      }
+    }
+  }
+  .footer {
+    h2 {
+      width: 30%;
+    }
+    hr {
+      width: 75%;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xxl) {
+  .header {
+    padding: 28px 230px;
+  }
+  .hero {
+    width: 60%;
+  }
+  .mockup {
+    div {
+      width: 360px;
+    }
+  }
+  .special {
+    padding: 0 190px;
+    div {
+      width: 500px;
+    }
+    section {
+      h3 {
+        width: 65%;
+      }
+      p {
+        width: 65%;
+      }
+    }
+  }
+  .footer {
+    div {
+      margin: 35px 0;
+    }
+    h2 {
+      width: 20%;
+    }
+  }
+  .footer-links {
+    width: 75%;
   }
 }

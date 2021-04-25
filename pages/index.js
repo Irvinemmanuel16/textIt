@@ -122,11 +122,13 @@ export default function Home() {
             height={489}
           />
         </div>
-        <h3>Conect with the people you love</h3>
-        <p>
-          Have the ones you care about in one place. Text It allows you to add
-          and organize your contact list according to your needs.
-        </p>
+        <section>
+          <h3>Conect with the people you love</h3>
+          <p>
+            Have the ones you care about in one place. Text It allows you to add
+            and organize your contact list according to your needs.
+          </p>
+        </section>
       </section>
       <footer className={styles.footer}>
         <h2>Call It, Say It Text It</h2>
